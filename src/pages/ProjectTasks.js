@@ -1,6 +1,6 @@
-// pages/ProjectTasks.js
+
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';//useParams → تاخد الـ id من الـ URL (/project/1 → id = 1)
 import {
   DndContext,
   DragOverlay,
@@ -20,7 +20,7 @@ import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import TaskCard from '../components/TaskCard';
 
-// مكون المهمة القابلة للسحب
+
 function SortableTask({ task, onDelete, onMove }) {
   const {
     attributes,
@@ -38,9 +38,9 @@ function SortableTask({ task, onDelete, onMove }) {
   };
 
   return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <TaskCard task={task} onDelete={onDelete} onMove={onMove} />
-    </div>
+  <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
+    <TaskCard task={task} onDelete={onDelete} onMove={onMove} />
+  </div>
   );
 }
 
@@ -51,14 +51,18 @@ function ProjectTasks({ projects, tasks, setTasks }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeId, setActiveId] = useState(null);
 
-  const sensors = useSensors(
-    useSensor(PointerSensor),
+const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 8,
+      },
+    }),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
     })
   );
 
-  // فلترة المهام بناءً على البحث
+
   const projectTasks = tasks.filter(t => {
     const matchesProject = t.projectId === parseInt(id);
     const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -145,7 +149,7 @@ function ProjectTasks({ projects, tasks, setTasks }) {
         <div className="header-actions">
           <input 
             type="text"
-            placeholder="🔍 Search tasks..."
+            placeholder=" Search tasks..."
             className="search-input"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}

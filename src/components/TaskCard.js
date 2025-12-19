@@ -1,4 +1,4 @@
-// components/TaskCard.js
+
 import React from 'react';
 
 function TaskCard({ task, onDelete, onMove }) {

@@ -1,4 +1,4 @@
-// pages/Dashboard.js
+
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 

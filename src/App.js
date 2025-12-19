@@ -13,12 +13,12 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
 
-  // Toggle Dark Mode
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
-  // Apply Dark Mode to body
+
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -27,7 +27,7 @@ function App() {
     }
   }, [darkMode]);
 
-  // Fetch projects from DummyJSON
+
   useEffect(() => {
     fetch('https://dummyjson.com/products?limit=6')
       .then(response => response.json())
@@ -42,7 +42,7 @@ function App() {
       .catch(error => console.error('Error fetching projects:', error));
   }, []);
 
-  // Fetch tasks from DummyJSON
+
   useEffect(() => {
     fetch('https://dummyjson.com/todos?limit=20')
       .then(response => response.json())

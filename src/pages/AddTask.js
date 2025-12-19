@@ -1,4 +1,4 @@
-// pages/AddTask.js
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ function AddTask({ projects, tasks, setTasks }) {
     };
 
     setTasks([...tasks, newTask]);
-    navigate(`/project/${formData.projectId}`);
+    navigate(`/project/${formData.projectId}`);// Redirect to the projectTasks page
   };
 
   return (

@@ -1,4 +1,4 @@
-// pages/AddProject.js
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,8 +11,8 @@ function AddProject({ projects, setProjects }) {
 
   const handleChange = (e) => {
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+      ...formData,//انسخ كل القيم القديمة
+      [e.target.name]: e.target.value//name="title"  →  title: "value"
     });
   };
 
