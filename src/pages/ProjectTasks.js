@@ -164,9 +164,9 @@ function ProjectTasks({ projects, tasks, setTasks }) {
         onDragEnd={handleDragEnd}
       >
         <div className="columns">
-          {renderColumn(todoTasks, 'todo', 'To Do', '📋')}
-          {renderColumn(progressTasks, 'progress', 'In Progress', '⚙️')}
-          {renderColumn(doneTasks, 'done', 'Done', '✅')}
+          {renderColumn(todoTasks, 'todo', 'To Do', '')}
+          {renderColumn(progressTasks, 'progress', 'In Progress', '')}
+          {renderColumn(doneTasks, 'done', 'Done', '')}
         </div>
 
         <DragOverlay>

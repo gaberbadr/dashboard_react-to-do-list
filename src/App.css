@@ -340,3 +340,134 @@ body {
     width: 100%;
   }
 }
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .navbar {
+  background-color: #0d1117;
+  border-bottom: 1px solid #30363d;
+}
+
+.dark-mode .nav-link {
+  color: #e0e0e0;
+}
+
+.dark-mode .nav-link:hover {
+  background-color: #21262d;
+}
+
+.dark-mode .page-title {
+  color: #e0e0e0;
+}
+
+.dark-mode .card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+}
+
+.dark-mode .card:hover {
+  border-color: #58a6ff;
+}
+
+.dark-mode .card-title {
+  color: #e0e0e0;
+}
+
+.dark-mode .card-desc {
+  color: #8b949e;
+}
+
+.dark-mode .task-count {
+  color: #8b949e;
+}
+
+.dark-mode .column {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+}
+
+.dark-mode .column-title {
+  color: #e0e0e0;
+}
+
+.dark-mode .column-content {
+  background-color: transparent;
+}
+
+.dark-mode .task-card {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+}
+
+.dark-mode .task-card:hover {
+  border-color: #58a6ff;
+}
+
+.dark-mode .task-title {
+  color: #e0e0e0;
+}
+
+.dark-mode .task-desc {
+  color: #8b949e;
+}
+
+.dark-mode .form {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+}
+
+.dark-mode .form-group label {
+  color: #e0e0e0;
+}
+
+.dark-mode .form-input,
+.dark-mode .form-textarea,
+.dark-mode .form-select,
+.dark-mode .search-input {
+  background-color: #0d1117;
+  border-color: #30363d;
+  color: #e0e0e0;
+}
+
+.dark-mode .form-input:focus,
+.dark-mode .form-textarea:focus,
+.dark-mode .form-select:focus,
+.dark-mode .search-input:focus {
+  border-color: #58a6ff;
+}
+
+.dark-mode .btn-secondary {
+  background-color: #21262d;
+}
+
+.dark-mode .btn-secondary:hover {
+  background-color: #30363d;
+}
+
+.dark-mode .btn-small {
+  background-color: #21262d;
+  color: #e0e0e0;
+}
+
+.dark-mode .btn-small:hover {
+  background-color: #30363d;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
